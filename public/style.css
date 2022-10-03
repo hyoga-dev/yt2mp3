@@ -14,3 +14,19 @@ main {
   text-align: center;
   height: 100vh;
 }
+
+#inputID {
+  height: 30px;
+  border: none;
+  background-color: antiquewhite;
+}
+
+.btn {
+  margin-left: 8px;
+  height: 30px;
+  border: none;
+}
+
+.btn:hover {
+  background-color: aliceblue;
+}
