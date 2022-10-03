@@ -8,6 +8,7 @@ h1 {
 }
 
 main {
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,17 +17,29 @@ main {
 }
 
 #inputID {
+  padding-left: 8px;
   height: 30px;
   border: none;
-  background-color: antiquewhite;
+  background-color: rgb(235, 235, 235);
+  transition: .4s;
+  border-radius: 5px;
+}
+
+#inputID:focus {
+  outline: none;
+  background-color: rgb(207, 207, 207);
+  color: black;
 }
 
 .btn {
+  border-radius: 5px;
   margin-left: 8px;
   height: 30px;
   border: none;
+  transition: .4s;
 }
 
 .btn:hover {
-  background-color: aliceblue;
+  background-color: rgb(199, 199, 199);
+  cursor: pointer;
 }

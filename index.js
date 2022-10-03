@@ -2,6 +2,8 @@ const axios = require('axios');
 const express = require('express')
 require('dotenv').config();
 const cors = require('cors')
+var favicon = require('serve-favicon')
+const path = require('path')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -11,6 +13,7 @@ app.use(cors())
 app.use(express.static( "public" ))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 
 
