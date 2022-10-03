@@ -1,6 +1,5 @@
 const axios = require('axios');
 const express = require('express')
-const fetch = require('node-fetch')
 require('dotenv').config();
 const cors = require('cors')
 
