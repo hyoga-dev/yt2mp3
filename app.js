@@ -15,9 +15,9 @@ app.use(express.json())
 
 
 
-app.get('/', (req, res) => {
-  res.render('index')
-})
+// app.get('/', (req, res) => {
+//   res.render('index')
+// })
 
 app.post('/test', (req, res) => {
   const data = req.body.value
