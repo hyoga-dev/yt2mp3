@@ -25,7 +25,7 @@ async function take() {
   const data = await res.json();
   console.log(data.link);
   const txt = `
-    <a href=${data.link}><button class="btn">DOWNLOAD</button></a>
+    <a href=${data.link}><button class="btn" onclick="setTimeout(des(), 500)">DOWNLOAD</button></a>
   `;
 
   bot.innerHTML = txt;
