@@ -10,6 +10,7 @@ h1 {
 main {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -42,4 +43,8 @@ main {
 .btn:hover {
   background-color: rgb(199, 199, 199);
   cursor: pointer;
+}
+
+iframe {
+  display: none;
 }
