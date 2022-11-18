@@ -48,3 +48,16 @@ main {
 iframe {
   display: none;
 }
+
+@media screen and (max-width: 400px) {
+  .top-container {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn{ 
+    margin-left: 0;
+  }
+}
