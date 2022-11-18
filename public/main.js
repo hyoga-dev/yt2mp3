@@ -1,4 +1,7 @@
 const bot = document.getElementById("bottom");
+const myVideo = document.getElementById("myvideo")
+const dataTitle = document.getElementById("data-title")
+
 function youtube_parser(url){
   var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
   var match = url.match(regExp);
@@ -7,10 +10,12 @@ function youtube_parser(url){
 
 async function take() {
   const inputID = document.getElementById("inputID");
+  myVideo.style.opacity = "0.5"
 
   const datas = {
     value: youtube_parser(inputID.value),
   };
+  
   const option = {
     method: "post",
     headers: {
@@ -19,17 +24,20 @@ async function take() {
 
     body: JSON.stringify(datas),
   };
-  // console.log(datas)
-  // fetch("/api", option)
+
+  inputID.value = "";
+
   const res = await fetch("/api", option);
   const data = await res.json();
   console.log(data.link);
-  const txt = `
-    <a href=${data.link}><button class="btn" onclick="setTimeout(des(), 500)">DOWNLOAD</button></a>
-  `;
 
+  const txt = `
+  <a href=${data.link}><button class="btn" onclick="setTimeout(des(), 500)">DOWNLOAD</button></a>
+  `;
+  
   bot.innerHTML = txt;
-  inputID.value = "";
+  dataTitle.innerHTML = data.title;
+  myVideo.style.opacity = "1";
 }
 
 function des() {
